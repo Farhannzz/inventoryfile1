@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================================================================
+     FILE: app/src/main/res/layout/activity_form.xml
+     Halaman Input/Edit Data Alat Kesehatan - Sisi Teknisi
+     =================================================================== -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spektrum_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.SpektrumInventory.Toolbar"
+        app:elevation="2dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/spektrum_primary"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Input Data Alat Baru"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- ============== SECTION: LOKASI FASKES ============== -->
+            <TextView
+                style="@style/SectionLabel"
+                android:text="Informasi Fasilitas Kesehatan" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Pilih Faskes" />
+
+            <Spinner
+                android:id="@+id/spinnerFaskes"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <!-- ============== SECTION: IDENTITAS ALAT ============== -->
+            <TextView
+                style="@style/SectionLabel"
+                android:text="Identitas Alat Kesehatan" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="QR Code" />
+
+            <EditText
+                android:id="@+id/etQrCode"
+                style="@style/InputField"
+                android:hint="Scan atau ketik kode QR alat"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Serial Number (SN)" />
+
+            <EditText
+                android:id="@+id/etSerialNumber"
+                style="@style/InputField"
+                android:hint="Contoh: SN-20240312-001"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Tanggal Inventory" />
+
+            <EditText
+                android:id="@+id/etTanggalInventory"
+                style="@style/InputField"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:focusable="false"
+                android:hint="Pilih tanggal"
+                android:inputType="none" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Nama Alat" />
+
+            <EditText
+                android:id="@+id/etNamaAlat"
+                style="@style/InputField"
+                android:hint="Contoh: Patient Monitor"
+                android:inputType="textCapWords" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Merk" />
+
+            <EditText
+                android:id="@+id/etMerk"
+                style="@style/InputField"
+                android:hint="Contoh: Philips, GE, Mindray"
+                android:inputType="textCapWords" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Tipe Alat" />
+
+            <EditText
+                android:id="@+id/etTipeAlat"
+                style="@style/InputField"
+                android:hint="Contoh: IntelliVue MX450"
+                android:inputType="text" />
+
+            <!-- ============== SECTION: LOKASI PENEMPATAN ============== -->
+            <TextView
+                style="@style/SectionLabel"
+                android:text="Lokasi Penempatan Alat" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Nama Ruang / Gedung" />
+
+            <EditText
+                android:id="@+id/etNamaRuangGedung"
+                style="@style/InputField"
+                android:hint="Contoh: Ruang ICU Gedung A"
+                android:inputType="textCapWords" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Lantai" />
+
+            <EditText
+                android:id="@+id/etLantai"
+                style="@style/InputField"
+                android:hint="Contoh: 2"
+                android:inputType="text" />
+
+            <!-- ============== SECTION: KONDISI ALAT ============== -->
+            <TextView
+                style="@style/SectionLabel"
+                android:text="Kondisi Alat Saat Ini" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupKondisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_edittext"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/rbBaik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Baik"
+                    android:textColor="@color/status_baik_text"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rbRusak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Rusak"
+                    android:textColor="@color/status_rusak_text"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rbKalibrasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Butuh Kalibrasi"
+                    android:textColor="@color/status_kalibrasi_text"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="⚠️ Jika kondisi 'Rusak' atau 'Butuh Kalibrasi' dipilih, notifikasi peringatan otomatis akan dikirim ke manajemen."
+                android:textColor="@color/spektrum_text_secondary"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <!-- ============== TOMBOL SIMPAN ============== -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/spektrum_primary"
+                android:text="Simpan Data Alat"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:icon="@drawable/ic_save"
+                app:iconGravity="textStart" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

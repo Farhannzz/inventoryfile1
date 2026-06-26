@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================================================================
+     FILE: app/src/main/res/values/colors.xml
+     =================================================================== -->
+<resources>
+    <!-- Palet warna utama, terinspirasi Material Design 3 - Tema Biru Korporat -->
+    <color name="spektrum_primary">#1565C0</color>
+    <color name="spektrum_primary_dark">#0D47A1</color>
+    <color name="spektrum_primary_container">#D5E3FF</color>
+    <color name="spektrum_secondary">#37474F</color>
+    <color name="spektrum_on_primary">#FFFFFF</color>
+
+    <color name="spektrum_background">#F8F9FA</color>
+    <color name="spektrum_surface">#FFFFFF</color>
+    <color name="spektrum_surface_variant">#ECEFF1</color>
+
+    <color name="spektrum_outline">#CBD5E0</color>
+    <color name="spektrum_text_primary">#1A1C1E</color>
+    <color name="spektrum_text_secondary">#5F6368</color>
+
+    <!-- Warna status kondisi alat -->
+    <color name="status_baik_bg">#E8F5E9</color>
+    <color name="status_baik_text">#2E7D32</color>
+    <color name="status_rusak_bg">#FFEBEE</color>
+    <color name="status_rusak_text">#C62828</color>
+    <color name="status_kalibrasi_bg">#FFF3E0</color>
+    <color name="status_kalibrasi_text">#EF6C00</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

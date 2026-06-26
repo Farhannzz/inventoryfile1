@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================================================================
+     FILE: app/src/main/res/xml/file_paths.xml
+     Konfigurasi FileProvider agar file PDF di internal storage bisa
+     dibuka oleh aplikasi PDF viewer eksternal dengan aman.
+     =================================================================== -->
+<paths>
+    <!-- "reports" harus sesuai dengan folder yang dipakai di PdfExportHelper.kt -->
+    <files-path name="reports" path="reports/" />
+</paths>

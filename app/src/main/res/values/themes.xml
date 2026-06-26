@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================================================================
+     FILE: app/src/main/res/values/themes.xml
+     =================================================================== -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.SpektrumInventory" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/spektrum_primary</item>
+        <item name="colorPrimaryDark">@color/spektrum_primary_dark</item>
+        <item name="colorPrimaryContainer">@color/spektrum_primary_container</item>
+        <item name="colorOnPrimary">@color/spektrum_on_primary</item>
+        <item name="colorSecondary">@color/spektrum_secondary</item>
+        <item name="android:statusBarColor">@color/spektrum_primary_dark</item>
+        <item name="android:windowBackground">@color/spektrum_background</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="Theme.SpektrumInventory.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextColor">@color/white</item>
+        <item name="android:background">@color/spektrum_primary</item>
+    </style>
+</resources>

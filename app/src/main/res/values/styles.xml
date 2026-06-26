@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================================================================
+     FILE: app/src/main/res/values/styles.xml
+     Style reusable untuk form input, agar XML layout lebih bersih & konsisten.
+     =================================================================== -->
+<resources>
+
+    <!-- Label judul section, misal "Informasi Fasilitas Kesehatan" -->
+    <style name="SectionLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textColor">@color/spektrum_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <!-- Label kecil di atas setiap field input, misal "Nama Alat" -->
+    <style name="FieldLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textColor">@color/spektrum_text_secondary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- Style EditText input seragam di seluruh form -->
+    <style name="InputField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="android:textColor">@color/spektrum_text_primary</item>
+        <item name="android:textColorHint">#9AA5B1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+
+</resources>

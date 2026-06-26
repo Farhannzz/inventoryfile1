@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FILE: app/src/main/res/drawable/ic_launcher_foreground.xml -->
+<!-- Logo sederhana: ikon "kotak P3K / inventory medis" bergaya minimal -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Kotak putih (badan ikon) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,40 L74,40 C77.31,40 80,42.69 80,46 L80,74 C80,77.31 77.31,80 74,80 L34,80 C30.69,80 28,77.31 28,74 L28,46 C28,42.69 30.69,40 34,40 Z" />
+    <!-- Simbol plus (tanda medis) -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M50,48 L58,48 L58,56 L66,56 L66,64 L58,64 L58,72 L50,72 L50,64 L42,64 L42,56 L50,56 Z" />
+</vector>

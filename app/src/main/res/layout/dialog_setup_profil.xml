@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================================================================
+     FILE: app/src/main/res/layout/dialog_setup_profil.xml
+     Dialog setup profil teknisi -> muncul sekali saat pertama buka app
+     Demonstrasi: SharedPreferences (Pertemuan 16)
+     =================================================================== -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Selamat Datang, Teknisi!"
+        android:textColor="@color/spektrum_text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Lengkapi profil Anda sebelum mulai menggunakan aplikasi. Data ini akan disimpan secara lokal di perangkat (SharedPreferences)."
+        android:textColor="@color/spektrum_text_secondary"
+        android:textSize="13sp" />
+
+    <TextView
+        style="@style/FieldLabel"
+        android:text="Nama Teknisi" />
+
+    <EditText
+        android:id="@+id/etNamaTeknisiDialog"
+        style="@style/InputField"
+        android:hint="Contoh: Budi Santoso"
+        android:inputType="textCapWords" />
+
+    <TextView
+        style="@style/FieldLabel"
+        android:text="Faskes Default (lokasi penugasan utama)" />
+
+    <Spinner
+        android:id="@+id/spinnerFaskesDialog"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_edittext"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp" />
+
+</LinearLayout>

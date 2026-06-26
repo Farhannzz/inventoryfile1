@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================================================================
+     FILE: app/src/main/res/layout/activity_main.xml
+     Dashboard Utama: List Alat + Filter Faskes + Search Realtime + Export PDF
+     =================================================================== -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spektrum_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ============== TOOLBAR / APP BAR ============== -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.SpektrumInventory.Toolbar"
+            app:elevation="2dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/spektrum_primary"
+                app:title="Dashboard Inventory Alat"
+                app:titleTextColor="@color/white"
+                app:subtitleTextColor="#D5E3FF" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- ============== PANEL FILTER & SEARCH ============== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/spektrum_primary"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- Spinner Pilih Faskes -->
+            <Spinner
+                android:id="@+id/spinnerFilterFaskes"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <!-- EditText Pencarian Global Realtime -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_search" />
+
+                <EditText
+                    android:id="@+id/etSearchGlobal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Cari Nama Alat atau QR Code..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/spektrum_text_primary"
+                    android:textColorHint="#9AA5B1"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ============== TOMBOL EXPORT PDF ============== -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExportPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/spektrum_secondary"
+            android:text="Export Laporan PDF"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_pdf"
+            app:iconGravity="textStart" />
+
+        <!-- ============== KONTEN UTAMA: RECYCLERVIEW + EMPTY STATE ============== -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewEquipment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="88dp" />
+
+            <!-- Empty State: tampil otomatis saat data kosong (lihat MainActivity.observeViewModel) -->
+            <LinearLayout
+                android:id="@+id/llEmptyContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/ic_empty_box" />
+
+                <TextView
+                    android:id="@+id/tvEmptyState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Belum ada data alat.\nTekan tombol + untuk menambah data baru."
+                    android:textAlignment="center"
+                    android:textColor="@color/spektrum_text_secondary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- ============== FOOTER IDENTITAS ============== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/spektrum_surface"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/footer_identitas"
+            android:textColor="@color/spektrum_text_secondary"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <!-- ============== FAB TAMBAH DATA ============== -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/spektrum_primary"
+        android:contentDescription="Tambah Data Alat"
+        android:src="@drawable/ic_add"
+        app:tint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

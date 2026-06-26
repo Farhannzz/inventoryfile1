@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ===================================================================
+     FILE: app/src/main/res/values/strings.xml
+     =================================================================== -->
+<resources>
+    <string name="app_name">Spektrum Inventory Mobile</string>
+    <string name="title_main">Dashboard Inventory Alat</string>
+    <string name="title_form">Input Data Alat</string>
+    <string name="footer_identitas">Muhammad Farhan Fadilah — NIM 231011402221</string>
+</resources>
